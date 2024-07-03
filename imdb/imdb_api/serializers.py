@@ -7,8 +7,8 @@ class WatchListSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = WatchList
-        # fields = '__all__'
-        fields = ['title','owner','url','storyline','platform','active','created']
+        fields = '__all__'
+        # fields = ['title','owner','url','storyline','platform','active','created']
 
 class StreamPlatformSerializer(serializers.HyperlinkedModelSerializer):
     watchlist = serializers.StringRelatedField(many=True, read_only=True)
